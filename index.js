@@ -337,7 +337,8 @@ function viewEmployees() {
               FROM employees
               LEFT JOIN roles on employees.role_id = roles.id
               LEFT JOIN departments ON roles.department_id = departments.id
-              LEFT JOIN employees manager On employees.manager_id = manager.id`;
+              LEFT JOIN employees manager On employees.manager_id = manager.id
+              ORDER BY employees.last_name ASC`;
   connection.query(sql, (err, res) => {
     if (err) throw err;
     console.table(res);
