@@ -90,7 +90,7 @@ function deleteDepartments() {
     .prompt({
       type: 'input',
       name: 'departmentName',
-      message: 'What department would you like to delete?'
+      message: 'What department name would you like to delete?'
     })
     .then(answer => {
       const departmentName = answer.departmentName;
@@ -195,7 +195,7 @@ function deleteRoles() {
     .prompt({
       type: 'input',
       name: 'roleTitle',
-      message: 'What role would you like to delete?'
+      message: 'What role title would you like to delete?'
     })
     .then(answer => {
       const roleTitle = answer.roleTitle;
@@ -373,7 +373,7 @@ function addEmployees() {
       {
         type: 'input',
         name: 'manager',
-        message: "What is the manager's employee id? (view employee table for refernce)",
+        message: "What is the manager's employee id? (view employee table for reference)",
         when: ({ managerConfirm }) => {
           if (managerConfirm) {
             return true;
@@ -411,7 +411,7 @@ function deleteEmployees() {
     .prompt({
       type: 'input',
       name: 'employeesId',
-      message: 'What employee would you like to delete (choose by employee id)?'
+      message: 'What employee would you like to delete? (choose by employee id)'
     })
     .then(answer => {
       const employeesId = answer.employeesId;

@@ -24,7 +24,12 @@ This application allows a user to keep track of employees of a company based on:
 1. Clone repository to your desired folder
 2. Use command line to download packages: <code>npm i</code>
 3. Insert your mysql password in the <code>.env</code> file
-4. To start the application type: <code>npm start</code> or <code>node server</code>
+4. Login into your mysql using: <code>mysql -u root -p</code>
+5. Populate the database and tables with these commands in order:
+    - <code>USE staff;</code>
+    - <code>SOURCE db/schema.sql;</code> (this is for testing purposes)
+    - <code>SOURCE db/seeds.sql;</code> (this is for testing purposes)
+6. To start the application type: <code>npm start</code> or <code>node server</code>
 
 ## Technologies
 
@@ -36,4 +41,4 @@ This application allows a user to keep track of employees of a company based on:
 
 ## Video
 
-![Video]
+![Video](assets/video/node-your-workers-video.gif)
