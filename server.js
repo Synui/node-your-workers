@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./db/connection');
+const connection = require('./db/connection');
 // const apiRoutes = require('./routes/apiRoutes');
 
 const PORT = process.env.PORT || 3001;
@@ -16,8 +16,8 @@ app.use((req, res) => {
     res.status(404).end();
   });
 
-  // Start server after DB connection
-db.connect(err => {
+  // Start server after connection
+connection.connect(err => {
     if (err) throw err;
     console.log('Database connected.');
     app.listen(PORT, () => {
